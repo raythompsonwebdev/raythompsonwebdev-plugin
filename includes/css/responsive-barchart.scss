@@ -31,18 +31,6 @@
             background: $blackcolor;
           }
 
-          #social {
-            width: 50%;
-            display: block;
-            float: left;
-            margin-top: 0;
-
-            h3 {
-              width: 100%;
-              margin: 2% 0;
-            }
-          }
-
           /* chart */
           #chart {
             width: 100%;
@@ -108,7 +96,7 @@
                 width: 16.5%;
                 position: absolute;
                 left: 0;
-                height: auto;
+                height: 100%;
                 text-align: left;
                 line-height: 65px;
                 font-size: 0.9em;
@@ -213,7 +201,6 @@
 
               span {
                 font-size: 0.85em;
-                line-height: 65px;
               }
             }
           }

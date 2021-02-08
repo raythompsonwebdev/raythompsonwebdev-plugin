@@ -19,7 +19,7 @@
 
 function raythompsonwebdev_com_slider_enqueue_style() {
 	wp_enqueue_style( 'raythompsonwebdev_com_style', plugins_url('/css/sliderpanel.css',__FILE__ ) );
-	//wp_enqueue_script( 'raythompsonwebdev_com_script', plugins_url('/js/scrollto.js', __FILE__ ) );
+	wp_enqueue_script( 'raythompsonwebdev_com_script', plugins_url('/js/scrollto.js', __FILE__ ) );
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_slider_enqueue_style' );
 

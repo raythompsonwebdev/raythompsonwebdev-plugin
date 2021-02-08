@@ -30,7 +30,6 @@ require_once (RTWDPATH . '/taxonomies/register.php');
 // Taxonomy.
 add_action( 'init', 'raythompsonwebdev_com_register_taxonomies', 0 );
 
-
 /**
  *  Flush rewrite rules to add "project" as a permalink slug.
  */
@@ -50,3 +49,5 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_project_enqueue_style' 
 require_once plugin_dir_path( __FILE__ ) . '/includes/responsive-barchart.php';
 
 require_once plugin_dir_path( __FILE__ ) . '/includes/slider-panel.php';
+
+require_once plugin_dir_path( __FILE__ ) . '/includes/block-pattern.php';
