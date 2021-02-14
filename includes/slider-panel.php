@@ -19,15 +19,14 @@
 
 function raythompsonwebdev_com_slider_enqueue_style() {
 	wp_enqueue_style( 'raythompsonwebdev_com_style', plugins_url('/css/sliderpanel.css',__FILE__ ) );
-	wp_enqueue_script( 'raythompsonwebdev_com_script', plugins_url('/js/scrollto.js', __FILE__ ) );
+	
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_slider_enqueue_style' );
 
 
 function sliderpanel_callback( $atts ) {
-
-	
-			wp_enqueue_script( 'raythompsonwebdev_com_script', plugins_url('/js/scrollto.js', __FILE__ ) );
+		
+			//wp_enqueue_script( 'raythompsonwebdev_com_script', plugins_url('/js/scrollto.js', __FILE__ ) );
 			wp_enqueue_script( 'raythompsonwebdev_com_script', plugins_url('/js/sliderpanel.js', __FILE__ ) );
 
 			$raythompsonwebdev_com_slider_panel_text = '[
@@ -42,7 +41,7 @@ function sliderpanel_callback( $atts ) {
 					"task4": "Manipulating Images",
 					"task5": "Evaluating Digital Images",
 					"buttonname": "Adobe",
-					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/Large-Photoshop-Certicate.jpg"
+					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/Large-Photoshop-Certicate.webp"
 				}, {
 					"id": "2",
 					"title": "ELATT",
@@ -54,7 +53,7 @@ function sliderpanel_callback( $atts ) {
 					"task4": "IT User fundementals",
 					"task5": "Organizing Content",
 					"buttonname": "ELATT",
-					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/ITQ-USERS-LEVEL3-LARGE.jpg"
+					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/ITQ-USERS-LEVEL3-LARGE.webp"
 				}, {
 					"id": "3",
 					"title": "Codepen",
@@ -66,7 +65,7 @@ function sliderpanel_callback( $atts ) {
 					"task4": "Random Quote Generator",
 					"task5": "Personal Portfolio",
 					"buttonname": "Codepen",
-					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/codepen-io-your-work-2020-10-17-22.png"
+					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/codepen-io-your-work-2020-10-17-22.webp"
 				}, {
 					"id": "4",
 					"title": "FreeCodeCamp",
@@ -78,7 +77,7 @@ function sliderpanel_callback( $atts ) {
 					"task4": "Javascript Projects",
 					"task5": "Responsive Web Design Projects",
 					"buttonname": "FreeCodeCamp",
-					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/freecodecamp-org-certification-raythompsonwebdev-javascript-algorithms-and-data-structures-2020-09-30-13_44_12.png"
+					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/freecodecamp-org-certification-raythompsonwebdev-javascript-algorithms-and-data-structures-2020-09-30-13_44_12.webp"
 				}, {
 					"id": "5",
 					"title": "Lynda.com",
@@ -90,7 +89,7 @@ function sliderpanel_callback( $atts ) {
 					"task4": "CSS Fundementals",
 					"task5": "Javascript Essentials",
 					"buttonname": "Lynda.com",
-					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/CertificateOfCompletion_Javascript-Essential-Training-2011.png"
+					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/CertificateOfCompletion_Javascript-Essential-Training-2011.webp"
 				}, {
 					"id": "6",
 					"title": "Codewars",
@@ -102,7 +101,7 @@ function sliderpanel_callback( $atts ) {
 					"task4": " ",
 					"task5": " ",
 					"buttonname": "Codewars",
-					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/py4e-badges.png"
+					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/py4e-badges.webp"
 				}, {
 					"id": "7",
 					"title": "Code Academy",
@@ -114,7 +113,7 @@ function sliderpanel_callback( $atts ) {
 					"task4": "Learn PHP",
 					"task5": " ",
 					"buttonname": "Code Academy",
-					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/codecademy-profiles-raythompsonwebdev-certificates.png"
+					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/codecademy-profiles-raythompsonwebdev-certificates.webp"
 				}, {
 					"id": "8",
 					"title": "Udacity",
@@ -126,7 +125,7 @@ function sliderpanel_callback( $atts ) {
 					"task4": "Website Performance Optimisation",
 					"task5": "Version Control with Git",
 					"buttonname": "Udacity",
-					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/Udacity_logo.png"
+					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/Udacity_logo.webp"
 				}, {
 					"id": "9",
 					"title": "Digital Futures 2017",
@@ -138,7 +137,7 @@ function sliderpanel_callback( $atts ) {
 					"task4": "Negotiation skills with CitizenUK.",
 					"task5": "Music creation using Sonic Pi",
 					"buttonname": "Digital Futures",
-					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/Digital-Futures-2017-Certificate-of-Participation-large.jpg"
+					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/Digital-Futures-2017-Certificate-of-Participation-large.webp"
 				}
 			]';
 			

@@ -19,7 +19,6 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 define( 'RTWD_VERSION', '1.0.0' );
-define( 'RTWDDOMAIN', 'raythompsonwebdev-com' );
 define( 'RTWDPATH', plugin_dir_path( __FILE__ ) );
 
 require_once (RTWDPATH . '/post-types/register.php');
