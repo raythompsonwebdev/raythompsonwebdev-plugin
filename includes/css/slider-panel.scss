@@ -203,10 +203,10 @@
                           margin-bottom: 0.1em;
 
                           &::before {
+                            content: "\f118";
                             font-family: $FontStyle;
                             font-size: 0.95em;
                             color: $blackcolor2;
-                            content: "\f005";
                             margin: 0 1%;
                             line-height: 1.5em;
                           }

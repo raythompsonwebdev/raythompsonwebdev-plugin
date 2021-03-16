@@ -21,6 +21,10 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'RTWD_VERSION', '1.0.0' );
 define( 'RTWDPATH', plugin_dir_path( __FILE__ ) );
 
+// remove version from head.
+remove_action( 'wp_head', 'wp_generator' );
+
+
 require_once (RTWDPATH . '/post-types/register.php');
 // Custom Post.
 add_action( 'init', 'raythompsonwebdev_com_register_post_type', 0 );
