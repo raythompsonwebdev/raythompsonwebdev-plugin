@@ -18,14 +18,15 @@
  *
  */
 
-function raythompsonwebdev_com_enqueue_style() {
-	wp_enqueue_style( 'raythompsonwebdev_com_style', plugins_url('/css/responsive-barchart.css',__FILE__ ) );
+function raythompsonwebdev_com_enqueue_chart_style() {
+	wp_enqueue_style( 'raythompsonwebdev_com_chart_style', plugins_url('/css/responsive-barchart.css',__FILE__ ) );
+	wp_enqueue_script( 'raythompsonwebdev_com_chart_script', plugins_url('/js/responsive-barchart.js',__FILE__ ) );
 }
-add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_enqueue_style' );
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_enqueue_chart_style' );
 
 function responsivechart_callback( $atts ) {
 
-	wp_enqueue_script( 'raythompsonwebdev_com_script', plugins_url('/js/responsive-barchart.js',__FILE__ ) );
+	
 	$raythompsonwebdev_com_chart_bars = '[
 		{
 			"id": "1",

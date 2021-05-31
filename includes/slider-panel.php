@@ -18,20 +18,24 @@
  */
 
 function raythompsonwebdev_com_slider_enqueue_style() {
-	wp_enqueue_style( 'raythompsonwebdev_com_style', plugins_url('/css/sliderpanel.css',__FILE__ ) );
+
+	wp_enqueue_style( 'raythompsonwebdev_com_slider_style', plugins_url('/css/slider-panel.css',__FILE__ ) );
+	
 	
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_slider_enqueue_style' );
 
 
-function sliderpanel_callback( $atts ) {
-		
-			//wp_enqueue_script( 'raythompsonwebdev_com_script', plugins_url('/js/scrollto.js', __FILE__ ) );
-			wp_enqueue_script( 'raythompsonwebdev_com_script', plugins_url('/js/sliderpanel.js', __FILE__ ) );
+
+
+function sliderpanel_callback( $atts ) {		
+	wp_enqueue_script( 'raythompsonwebdev_com_slider_script', plugins_url('/js/slider-panel-ES6.js', __FILE__ ) );
+			
 
 			$raythompsonwebdev_com_slider_panel_text = '[
 				{
-					"id": "1",
+					"id": "0",
+					"hash":"panel-1" ,
 					"title": "Adobe Certified Associates",
 					"header": "Visual Communication: Photoshop CS4",
 					"subheader": "Topics",
@@ -43,7 +47,8 @@ function sliderpanel_callback( $atts ) {
 					"buttonname": "Adobe",
 					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/Large-Photoshop-Certicate.webp"
 				}, {
-					"id": "2",
+					"id": "1",
+					"hash":"panel-2" ,
 					"title": "ELATT",
 					"header": "City & Guilds ITQ Level 1,2,3 Web Design",
 					"subheader": "Topics",
@@ -55,7 +60,8 @@ function sliderpanel_callback( $atts ) {
 					"buttonname": "ELATT",
 					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/ITQ-USERS-LEVEL3-LARGE.webp"
 				}, {
-					"id": "3",
+					"id": "2",
+					"hash":"panel-3" ,
 					"title": "Codepen",
 					"header": "Various",
 					"subheader": "Topics",
@@ -67,7 +73,8 @@ function sliderpanel_callback( $atts ) {
 					"buttonname": "Codepen",
 					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/codepen-io-your-work-2020-10-17-22.webp"
 				}, {
-					"id": "4",
+					"id": "3",
+					"hash":"panel-4" ,
 					"title": "FreeCodeCamp",
 					"header": "Frontend Developer Certificate",
 					"subheader": "Topics",
@@ -79,7 +86,8 @@ function sliderpanel_callback( $atts ) {
 					"buttonname": "FreeCodeCamp",
 					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/freecodecamp-org-certification-raythompsonwebdev-javascript-algorithms-and-data-structures-2020-09-30-13_44_12.webp"
 				}, {
-					"id": "5",
+					"id": "4",
+					"hash":"panel-5" ,
 					"title": "Lynda.com",
 					"header": "Lynda.com",
 					"subheader": "Topics",
@@ -91,7 +99,8 @@ function sliderpanel_callback( $atts ) {
 					"buttonname": "Lynda.com",
 					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/CertificateOfCompletion_Javascript-Essential-Training-2011.webp"
 				}, {
-					"id": "6",
+					"id": "5",
+					"hash":"panel-6" ,
 					"title": "Codewars",
 					"header": "Codewars",
 					"subheader": "Topics",
@@ -103,7 +112,8 @@ function sliderpanel_callback( $atts ) {
 					"buttonname": "Codewars",
 					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/py4e-badges.webp"
 				}, {
-					"id": "7",
+					"id": "6",
+					"hash":"panel-7" ,
 					"title": "Code Academy",
 					"header": "Various",
 					"subheader": "Topics",
@@ -115,7 +125,8 @@ function sliderpanel_callback( $atts ) {
 					"buttonname": "Code Academy",
 					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/codecademy-profiles-raythompsonwebdev-certificates.webp"
 				}, {
-					"id": "8",
+					"id": "7",
+					"hash":"panel-8" ,
 					"title": "Udacity",
 					"header": "Various",
 					"subheader": "Topics",
@@ -127,7 +138,8 @@ function sliderpanel_callback( $atts ) {
 					"buttonname": "Udacity",
 					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/Udacity_logo.webp"
 				}, {
-					"id": "9",
+					"id": "8",
+					"hash":"panel-9" ,
 					"title": "Digital Futures 2017",
 					"header": "Interactive Programming",
 					"subheader": "Topics",
@@ -185,14 +197,14 @@ function sliderpanel_callback( $atts ) {
 
 			<!-- #hero-slider -->
 			<article class="hero-slider">
-				<ul id="list">
+				<!-- <ul id="list">
 					<?php foreach ( $raythompsonwebdev_com_courses_tabs as $raythompsonwebdev_com_courses_tab ) : ?>
-				<li>
-					<a href="#" rel="#panel-<?php printf( '%s', esc_html( $raythompsonwebdev_com_courses_tab['id'] ), 'raythompsonwebdev-com' ); ?>" class="hero-btn active" title="<?php printf( '%s', esc_html( $raythompsonwebdev_com_courses_tab['buttonname'] ), 'raythompsonwebdev-com' ); ?>" ><?php printf( '%s', esc_html( $raythompsonwebdev_com_courses_tab['buttonname'] ), 'raythompsonwebdev-com' ); ?></a>
-				</li>
+					<li>
+						<a href="#" rel="#panel-<?php printf( '%s', esc_html( $raythompsonwebdev_com_courses_tab['id'] ), 'raythompsonwebdev-com' ); ?>" class="hero-btn active" title="<?php printf( '%s', esc_html( $raythompsonwebdev_com_courses_tab['buttonname'] ), 'raythompsonwebdev-com' ); ?>" ><?php printf( '%s', esc_html( $raythompsonwebdev_com_courses_tab['buttonname'] ), 'raythompsonwebdev-com' ); ?></a>
+					</li>
 					<?php endforeach; ?>
 
-				</ul>
+				</ul> -->
 				<!--mask-->
 				<div class="mask">
 					<!--slider body -->
@@ -200,7 +212,7 @@ function sliderpanel_callback( $atts ) {
 
 						<?php foreach ( $raythompsonwebdev_com_slider_panels as $raythompsonwebdev_com_slider_panel ) : ?>
 
-						<article class="panel" id="panel-<?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['id'] ), 'raythompsonwebdev-com' ); ?>">
+						<article class="panel" id="<?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['hash'] ), 'raythompsonwebdev-com' ); ?>">
 
 							<h2><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['title'] ), 'raythompsonwebdev-com' ); ?> </h2>
 
@@ -236,8 +248,11 @@ function sliderpanel_callback( $atts ) {
 
 					</div>
 					<!--slider body end-->
+					
 				</div>
 				<!-- .mask end -->
+
+				<div id="slids"><a href="#" id="next">Next</a><a href="#" id="prev">prev</a></div>
 
 			</article>
 			<!-- hero-slider end -->
