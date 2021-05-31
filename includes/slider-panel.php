@@ -230,11 +230,11 @@ function sliderpanel_callback( $atts ) {
 									<h4><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['subheader'] ), 'raythompsonwebdev-com' ); ?></h4>
 
 									<ul>
-										<li><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['task1'] ), 'raythompsonwebdev-com' ); ?></li>
-										<li><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['task2'] ), 'raythompsonwebdev-com' ); ?></li>
-										<li><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['task3'] ), 'raythompsonwebdev-com' ); ?></li>
-										<li><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['task4'] ), 'raythompsonwebdev-com' ); ?></li>
-										<li><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['task5'] ), 'raythompsonwebdev-com' ); ?></li>
+										<li class="dashicons-before"><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['task1'] ), 'raythompsonwebdev-com' ); ?></li>
+										<li class="dashicons-before"><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['task2'] ), 'raythompsonwebdev-com' ); ?></li>
+										<li class="dashicons-before"><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['task3'] ), 'raythompsonwebdev-com' ); ?></li>
+										<li class="dashicons-before"><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['task4'] ), 'raythompsonwebdev-com' ); ?></li>
+										<li class="dashicons-before"><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['task5'] ), 'raythompsonwebdev-com' ); ?></li>
 									</ul>
 
 									<div class="clearfix"></div>

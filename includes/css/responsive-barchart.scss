@@ -132,14 +132,6 @@
               font-size: 1.2em;
             }
 
-            #social {
-              width: 50%;
-
-              h3 {
-                width: 100%;
-              }
-            }
-
             #chart {
               width: 100%;
 
@@ -217,7 +209,7 @@
       div.wp-block-group {
         .wp-block-group__inner-container {
           section#prof_cont {
-            width: 50%;
+            width: 45%;
 
             h1 {
               font-size: 1.1em;
@@ -268,7 +260,7 @@
             margin: 1em;
 
             h1 {
-              font-size: 1.2em;
+              font-size: 1.1em;
             }
 
             #chart {
@@ -292,7 +284,7 @@
                 span {
                   font-size: 0.9em;
                   width: 17.5%;
-                  line-height: 70px;
+                  line-height: 50px;
                 }
               }
             }
@@ -311,7 +303,7 @@
             width: 90%;
 
             h1 {
-              font-size: 1em;
+              font-size: 1.1em;
             }
 
             #chart {
@@ -325,7 +317,7 @@
                     }
 
                     &:hover::after {
-                      left: 72%;
+                      left: calc(80% - 9%);
                       font-size: 0.75em;
                       width: 28%;
                     }
@@ -353,7 +345,7 @@
             width: 98%;
 
             h1 {
-              font-size: 1em;
+              font-size: 1.05em;
             }
 
             #chart {
@@ -369,13 +361,15 @@
 
                     &:hover::after {
                       font-size: 0.7em;
+                      line-height: 40px;
                     }
                   }
                 }
 
                 span {
                   width: 21.5%;
-                  font-size: 0.9em;
+                  font-size: 0.8em;
+                  line-height: 40px;
                 }
               }
             }
@@ -393,7 +387,7 @@
           width: 98%;
 
           h1 {
-            font-size: 1em;
+            font-size: 1.05em;
           }
 
           #chart {
@@ -408,6 +402,7 @@
 
                   &:hover::after {
                     font-size: 0.7em;
+                    left: calc(80% - 11%);
                   }
                 }
               }
@@ -415,7 +410,7 @@
               span {
                 width: 21.5%;
 
-                font-size: 0.9em;
+                font-size: 0.8em;
               }
             }
           }
@@ -434,7 +429,7 @@
             margin: 0.5em;
 
             h1 {
-              font-size: 0.9em;
+              font-size: 1.05em;
             }
 
             #chart {
@@ -450,17 +445,17 @@
                     }
 
                     &:hover::after {
-                      left: 68%;
-                      font-size: 0.65em;
+                      font-size: 0.7em;
                       width: 32%;
+                      line-height: 40px;
                     }
                   }
                 }
 
                 span {
                   width: 21.5%;
-
-                  font-size: 0.8em;
+                  font-size: 0.75em;
+                  line-height: 40px;
                 }
               }
             }
@@ -480,15 +475,7 @@
             margin: 0.5em;
 
             h1 {
-              font-size: 0.9em;
-            }
-
-            #social {
-              width: 50%;
-
-              h3 {
-                width: 100%;
-              }
+              font-size: 1em;
             }
 
             #chart {
@@ -498,7 +485,7 @@
                 li {
                   .bar {
                     &:hover::after {
-                      font-size: 0.6em;
+                      font-size: 0.7em;
                     }
                   }
                 }
