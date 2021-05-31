@@ -1,22 +1,23 @@
 <?php
 
-register_block_pattern_category(
-	'profile-page-block-pattern',
-	array(
-		'label' => __( 'Profile Page Pattern', 'raythompsonwebdev-com' ),
-	)
-);
-
-register_block_pattern_category(
-	'about-page-block-pattern',
-	array(
-		'label' => __( 'About Page Pattern', 'raythompsonwebdev-com' ),
-	)
-);
 
 function raythompsonwebdev_com_register_block_patterns() {
 
 	if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
+
+		register_block_pattern_category(
+			'profile-page-block-pattern',
+			array(
+				'label' => __( 'Profile Page Pattern', 'raythompsonwebdev-com' ),
+			)
+		);
+		
+		register_block_pattern_category(
+			'about-page-block-pattern',
+			array(
+				'label' => __( 'About Page Pattern', 'raythompsonwebdev-com' ),
+			)
+		);
 
 		register_block_pattern(
 			'raythompsonwebdev-com/profile-page-pattern',
@@ -137,34 +138,7 @@ function raythompsonwebdev_com_register_block_patterns() {
 					<div class="wp-block-group__inner-container">
 						<!-- wp:html -->
 						<article id="text-box-profile">
-							<p>
-								I have had a passion for web development since 2012 after attending a course
-								in basic web design for beginners at a place called ELATT in Hackney,
-								London. The experience of taking part in the course, learning the process of
-								developing a website inspired me to learn more about web development.
-							</p>
-
-							<p>
-								Since then I spend lots of my spare time learning coding languages,
-								practising coding,&nbsp;<strong
-									><a href="https://raythompsonwebdev.co.uk/projects"
-										>building web applications</a
-									></strong
-								>, sharing what I have learned with friends, online and at events during my
-								spare time while working full-time. I became more interested in programming
-								around 2016 after completing online courses like&nbsp;<strong
-									><a href="https://www.freecodecamp.org/raythompsonwebdev"
-										>Free Code Camp</a
-									></strong
-								>&nbsp;that year and gained even more inspiration to learn more about coding
-								languages like Javascipt, PHP, Ruby and Python and continue coding and
-								building small applications.
-							</p>
-
-							<p>
-								Keeping up with changes that have happended over the past few years in web
-								development has been a challenge.
-							</p>
+							
 						</article>
 						<!-- /wp:html -->
 
@@ -174,47 +148,7 @@ function raythompsonwebdev_com_register_block_patterns() {
 
 						<!-- wp:html -->
 						<article id="text-box-profile-a">
-							<!-- wp:paragraph -->
-							<p>
-								I have been inspired enough to continue learning and mastering new coding
-								techniques to solve problems I come across when coding.&nbsp;&nbsp;<strong
-								></strong>
-							</p>
-							<!-- /wp:paragraph -->
-
-							<!-- wp:paragraph -->
-							<p>
-								I have gained valuable knowledge and experience meeting others interested
-								in web development, online and at live events I have been able to attend.
-								Events like&nbsp;<strong
-									><a href="https://vimeo.com/232481032">Digital Futures 2017</a></strong
-								>&nbsp;in Waterloo, London. and&nbsp;<strong
-									><a href="https://2018.london.wordcamp.org/attendees/"
-										>WordCamp 2018</a
-									></strong
-								>&nbsp;in London and attending pair programming sessions to solve coding
-								problems like the one held by&nbsp;<strong
-									><a href="https://makers.tech/">Makers Academy.</a></strong
-								>
-							</p>
-							<!-- /wp:paragraph -->
-
-							<!-- wp:paragraph -->
-							<p>
-								This has helped me with the confidence to put into practice what I have
-								learned to create full stack web applications, wordpress themes and
-								plugins and other web programs.
-							</p>
-							<!-- /wp:paragraph -->
-
-							<!-- wp:paragraph -->
-							<p>
-								My aim is to continue improving my coding skills and workflow so that I am
-								able to help in the creation of well designed and maintainable web
-								applications and contribute towards improving the user experience,
-								security and accessibility of web application on the web for all users.
-							</p>
-							<!-- /wp:paragraph -->
+							
 						</article>
 						<!-- /wp:html -->
 

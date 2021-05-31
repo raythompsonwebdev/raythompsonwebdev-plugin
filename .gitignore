@@ -1,8 +1,6 @@
 
-css/style.css.map
-css/style.css
-css/partials
-includes/css/responsive-barchart.css.map
-includes/css/slider-panel.css.map
-includes/css/responsive-barchart.css
-includes/css/slider-panel.css
+css/responsive-barchart.css.map
+css/slider-panel.css.map
+css/responsive-barchart.css
+css/slider-panel.css
+js/spare/
