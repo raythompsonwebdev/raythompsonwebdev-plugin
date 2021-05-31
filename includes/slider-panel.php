@@ -78,11 +78,11 @@ function sliderpanel_callback( $atts ) {
 					"title": "FreeCodeCamp",
 					"header": "Frontend Developer Certificate",
 					"subheader": "Topics",
-					"task1": "Responsive Web Design Certification",
-					"task2": "Javascript Algorithms And Data Structures",
-					"task3": "Learning Python",
-					"task4": "Javascript Projects",
-					"task5": "Responsive Web Design Projects",
+					"task1": "Basic HTML and HTML 5",
+					"task2": "Basic CSS",
+					"task3": "CSS Flexbox",
+					"task4": "CSS Grids",
+					"task5": "Responsive Web Design Principles",
 					"buttonname": "FreeCodeCamp",
 					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/freecodecamp-org-certification-raythompsonwebdev-javascript-algorithms-and-data-structures-2020-09-30-13_44_12.webp"
 				}, {
@@ -104,11 +104,11 @@ function sliderpanel_callback( $atts ) {
 					"title": "Codewars",
 					"header": "Codewars",
 					"subheader": "Topics",
-					"task1": "Introduction to Python",
-					"task2": "Python Data Structures",
-					"task3": " ",
-					"task4": " ",
-					"task5": " ",
+					"task1": "Ruby",
+					"task2": "8th Kyu",
+					"task3": "5th Kyu ",
+					"task4": "6th Kyu ",
+					"task5": "7th Kyu ",
 					"buttonname": "Codewars",
 					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/py4e-badges.webp"
 				}, {
@@ -127,14 +127,14 @@ function sliderpanel_callback( $atts ) {
 				}, {
 					"id": "7",
 					"hash":"panel-8" ,
-					"title": "Udacity",
-					"header": "Various",
+					"title": "FreeCode Camp",
+					"header": "JavaScript Algorithms and Data Structures",
 					"subheader": "Topics",
-					"task1": "Progressive Web Apps",
-					"task2": "Networking for Web Developers(http)",
-					"task3": "Data Structures & Algorithms in Python",
-					"task4": "Website Performance Optimisation",
-					"task5": "Version Control with Git",
+					"task1": "Basic Javascript",
+					"task2": "ES6",
+					"task3": "Regular Expressions",
+					"task4": "Basic Data Structures",
+					"task5": "Basic Algorithim Scripting",
 					"buttonname": "Udacity",
 					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/Udacity_logo.webp"
 				}, {
@@ -222,7 +222,7 @@ function sliderpanel_callback( $atts ) {
 									href="<?php echo esc_url( home_url( '/' ) ); ?><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['bgimage'] ), 'raythompsonwebdev-com' ); ?>"
 									class="fancybox"
 									title="<?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['title'] ), 'raythompsonwebdev-com' ); ?>">
-									<span></span>
+									<span style="background-image: url('<?php echo esc_url( home_url( '/' ) ); ?><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['bgimage'] ), 'raythompsonwebdev-com' ); ?>') " > </span>
 								</a>
 
 								<figcaption>
@@ -252,11 +252,11 @@ function sliderpanel_callback( $atts ) {
 				</div>
 				<!-- .mask end -->
 
-				<div id="slids"><a href="#" id="next">Next</a><a href="#" id="prev">prev</a></div>
+			
 
 			</article>
 			<!-- hero-slider end -->
-
+	<div id="slids"><a href="#" id="next">Next</a><a href="#" id="prev">Prev</a></div>
 		</section>
 
 <?php
