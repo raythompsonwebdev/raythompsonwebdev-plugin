@@ -42,11 +42,10 @@ function raythompsonwebdev_com_rewrite_flush() {
 }
 register_activation_hook( __FILE__, 'raythompsonwebdev_com_rewrite_flush' );
 
+/**
+ * Registers an editor stylesheet for the theme.
+ */
 
-// function raythompsonwebdev_com_project_enqueue_style() {	
-// 	wp_enqueue_style( 'raythompsonwebdev_com_project_style', plugins_url('/css/style.css',__FILE__ ) );
-// }
-// add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_project_enqueue_style' );
 
 // include plugin dependencies: admin and public
 require_once plugin_dir_path( __FILE__ ) . 'responsive-barchart.php';

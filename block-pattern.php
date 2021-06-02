@@ -1,14 +1,29 @@
 <?php
 
+function raythompsonwebdev_com_editor_style() {
+
+	add_editor_style( 'css/custom-editor-style.css' );
+}
+add_action( 'admin_init', 'raythompsonwebdev_com_editor_style' );
+
+function raythompsonwebdev_com_enqueue_pattern_style() {
+	wp_enqueue_style( 'raythompsonwebdev_com_pattern_style', plugins_url('/css/blockpatterns.css',__FILE__ ) );
+	
+}
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_enqueue_pattern_style' );
+
+
+
+
 
 function raythompsonwebdev_com_register_block_patterns() {
 
 	if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
 
 		register_block_pattern_category(
-			'profile-page-block-pattern',
+			'home-page-block-pattern',
 			array(
-				'label' => __( 'Profile Page Pattern', 'raythompsonwebdev-com' ),
+				'label' => __( 'Home Page Pattern', 'raythompsonwebdev-com' ),
 			)
 		);
 		
@@ -20,10 +35,10 @@ function raythompsonwebdev_com_register_block_patterns() {
 		);
 
 		register_block_pattern(
-			'raythompsonwebdev-com/profile-page-pattern',
+			'raythompsonwebdev-com/home-page-pattern',
 			array(
-				'title'       => __( 'Profile Page Pattern', 'raythompsonwebdev-com' ),
-				'description' => _x( 'A call to action with a beautiful two-column gallery below.', 'Block pattern description', 'raythompsonwebdev-com' ),
+				'title'       => __( 'Home Page Pattern', 'raythompsonwebdev-com' ),
+				'description' => _x( 'Columns for making lists with image and header. ', 'Block pattern description', 'raythompsonwebdev-com' ),
 				'content'     => '<!-- wp:group {"align":"wide"} -->
 				<div class="wp-block-group alignwide">
 					<div class="wp-block-group__inner-container">
@@ -40,15 +55,14 @@ function raythompsonwebdev_com_register_block_patterns() {
 								<h4>Code</h4>
 								<!-- /wp:heading -->
 
-								<!-- wp:paragraph -->
-								<p>HTML & CSS</p>
-								<!-- /wp:paragraph -->
-								<!-- wp:paragraph -->
-								<p>PHP & MYSQL</p>
-								<!-- /wp:paragraph -->
-								<!-- wp:paragraph -->
-								<p>Javascript ES5/ES6</p>
-								<!-- /wp:paragraph -->
+								<!-- wp:list -->
+								<ul>
+								<li>HTML & CSS</li>
+								<li>PHP & MYSQL</li>
+								<li>Javascript ES5/ES6</li>
+								</ul>
+								<!-- /wp:list -->
+								
 							</div>
 							<!-- /wp:column -->
 
@@ -62,15 +76,13 @@ function raythompsonwebdev_com_register_block_patterns() {
 								<h4>Optimisation</h4>
 								<!-- /wp:heading -->
 
-								<!-- wp:paragraph -->
-								<p>Video, Audio & Image</p>
-								<!-- /wp:paragraph -->
-								<!-- wp:paragraph -->
-								<p>SQL Database</p>
-								<!-- /wp:paragraph -->
-								<!-- wp:paragraph -->
-								<p>On-Site SEO</p>
-								<!-- /wp:paragraph -->
+								<!-- wp:list -->
+								<ul>
+								<li>Video, Audio & Image</li>
+								<li>SQL Database</li>
+								<li>On-Site SEO</li>
+								</ul>
+								<!-- /wp:list -->
 							</div>
 							<!-- /wp:column -->
 
@@ -84,15 +96,14 @@ function raythompsonwebdev_com_register_block_patterns() {
 								<h4>WordPress</h4>
 								<!-- /wp:heading -->
 
-								<!-- wp:paragraph -->
-								<p>Set Up & Installation</p>
-								<!-- /wp:paragraph -->
-								<!-- wp:paragraph -->
-								<p>Themes & Plugins</p>
-								<!-- /wp:paragraph -->
-								<!-- wp:paragraph -->
-								<p>Gutenberg Blocks</p>
-								<!-- /wp:paragraph -->
+								<!-- wp:list -->
+								<ul>
+								<li>Set Up & Installation</li>
+								<li>Themes & Plugins</li>
+								<li>Gutenberg Blocks</li>
+								</ul>
+								<!-- /wp:list -->
+								
 							</div>
 							<!-- /wp:column -->
 
@@ -107,15 +118,14 @@ function raythompsonwebdev_com_register_block_patterns() {
 								<h4>Maintenance</h4>
 								<!-- /wp:heading -->
 
-								<!-- wp:paragraph -->
-								<p>Web Security</p>
-								<!-- /wp:paragraph -->
-								<!-- wp:paragraph -->
-								<p>Database</p>
-								<!-- /wp:paragraph -->
-								<!-- wp:paragraph -->
-								<p>Code Debugging</p>
-								<!-- /wp:paragraph -->
+								<!-- wp:list -->
+								<ul>
+								<li>Web Security</li>
+								<li>Database</li>
+								<li>Code Debugging</li>
+								</ul>
+								<!-- /wp:list -->
+								
 							</div>
 							<!-- /wp:column -->
 						</div>
@@ -131,8 +141,8 @@ function raythompsonwebdev_com_register_block_patterns() {
 		register_block_pattern(
 			'raythompsonwebdev-com/about-page-pattern',
 			array(
-				'title'       => __( 'about Page Pattern', 'raythompsonwebdev-com' ),
-				'description' => _x( 'about page layout.', 'Block pattern description', 'raythompsonwebdev-com' ),
+				'title'       => __( 'About Page Pattern', 'raythompsonwebdev-com' ),
+				'description' => _x( 'Layout for raythompsonwebdev portfolio about page.', 'Block pattern description', 'raythompsonwebdev-com' ),
 				'content'     => '<!-- wp:group {"align":"wide"} -->
 				<div class="wp-block-group alignwide" id="profile-container">
 					<div class="wp-block-group__inner-container">
