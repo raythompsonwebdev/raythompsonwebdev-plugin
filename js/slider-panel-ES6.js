@@ -1,6 +1,5 @@
 (function () {
   const next = document.getElementById("next");
-  const scrollScreen = document.querySelector("div.slider-body");
   const prev = document.getElementById("prev");
   const mask = window.document.querySelector(".hero-slider > .mask");
   const panels = Array.from(document.getElementsByClassName("panel"));

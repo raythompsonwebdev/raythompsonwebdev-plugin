@@ -7,7 +7,7 @@ function raythompsonwebdev_com_editor_style() {
 add_action( 'admin_init', 'raythompsonwebdev_com_editor_style' );
 
 function raythompsonwebdev_com_enqueue_pattern_style() {
-	wp_enqueue_style( 'raythompsonwebdev_com_pattern_style', plugins_url('/css/blockpatterns.css',__FILE__ ) );
+	wp_enqueue_style( 'raythompsonwebdev_com_pattern_style', plugins_url('css/blockpatterns.css',__FILE__ ) );
 	
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_enqueue_pattern_style' );

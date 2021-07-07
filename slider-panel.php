@@ -84,7 +84,7 @@ function sliderpanel_callback( $atts ) {
 					"task4": "CSS Grids",
 					"task5": "Responsive Web Design Principles",
 					"buttonname": "FreeCodeCamp",
-					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/freecodecamp-org-certification-raythompsonwebdev-javascript-algorithms-and-data-structures-2020-09-30-13_44_12.webp"
+					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/freecodecamp-org-certification-raythompsonwebdev-responsive-web-design.webp"
 				}, {
 					"id": "4",
 					"hash":"panel-5" ,
@@ -106,11 +106,11 @@ function sliderpanel_callback( $atts ) {
 					"subheader": "Topics",
 					"task1": "Ruby",
 					"task2": "8th Kyu",
-					"task3": "5th Kyu ",
+					"task3": "7th Kyu ",
 					"task4": "6th Kyu ",
-					"task5": "7th Kyu ",
+					"task5": "5th Kyu ",
 					"buttonname": "Codewars",
-					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/py4e-badges.webp"
+					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/large.png"
 				}, {
 					"id": "6",
 					"hash":"panel-7" ,
@@ -136,7 +136,7 @@ function sliderpanel_callback( $atts ) {
 					"task4": "Basic Data Structures",
 					"task5": "Basic Algorithim Scripting",
 					"buttonname": "Udacity",
-					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/Udacity_logo.webp"
+					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/freecodecamp-org-certification-raythompsonwebdev-javascript-algorithms-and-data-structures.webp"
 				}, {
 					"id": "8",
 					"hash":"panel-9" ,
