@@ -104,24 +104,24 @@ function sliderpanel_callback( $atts ) {
 					"title": "Codewars",
 					"header": "Codewars",
 					"subheader": "Topics",
-					"task1": "Ruby",
-					"task2": "8th Kyu",
-					"task3": "7th Kyu ",
-					"task4": "6th Kyu ",
-					"task5": "5th Kyu ",
+					"task1": "5th Kyu Katas",
+					"task2": "6th Kyu Katas",
+					"task3": "7th Kyu Katas",
+					"task4": "8th Kyu Katas",
+					"task5": "random Katas",
 					"buttonname": "Codewars",
 					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/large.png"
 				}, {
 					"id": "6",
 					"hash":"panel-7" ,
 					"title": "Code Academy",
-					"header": "Various",
+					"header": "Javascript",
 					"subheader": "Topics",
-					"task1": "Learn Ruby",
-					"task2": "Learn HTML",
-					"task3": "Learn Javascript",
-					"task4": "Learn PHP",
-					"task5": " ",
+					"task1": "Data Types",
+					"task2": "Loops",
+					"task3": "Array Methods",
+					"task4": "Objects",
+					"task5": "Conditionals",
 					"buttonname": "Code Academy",
 					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/codecademy-profiles-raythompsonwebdev-certificates.webp"
 				}, {
@@ -150,6 +150,19 @@ function sliderpanel_callback( $atts ) {
 					"task5": "Music creation using Sonic Pi",
 					"buttonname": "Digital Futures",
 					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/Digital-Futures-2017-Certificate-of-Participation-large.webp"
+				},{
+					"id": "9",
+					"hash":"panel-10" ,
+					"title": "Code Academy",
+					"header": "Ruby",
+					"subheader": "Topics",
+					"task1": "Arrays",
+					"task2": "Data Types",
+					"task3": "Classes",
+					"task4": "Methods",
+					"task5": "Conditionals",
+					"buttonname": "Code Academy",
+					"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/codecademy-profiles-raythompsonwebdev-certificates-ruby.webp"
 				}
 			]';
 			
