@@ -17,22 +17,22 @@
  *
  */
 
-function raythompsonwebdev_com_slider_enqueue_style() {
+function raythompsonwebdev_plugin_slider_enqueue_style() {
 
-	wp_enqueue_style( 'raythompsonwebdev_com_slider_style', plugins_url('/css/slider-panel.css',__FILE__ ) );
+	wp_enqueue_style( 'raythompsonwebdev_plugin_slider_style', plugins_url('/css/slider-panel.css',__FILE__ ) );
 	
 	
 }
-add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_slider_enqueue_style' );
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_plugin_slider_enqueue_style' );
 
 
 
 
 function sliderpanel_callback( $atts ) {		
-	wp_enqueue_script( 'raythompsonwebdev_com_slider_script', plugins_url('/js/slider-panel-ES6.js', __FILE__ ) );
+	wp_enqueue_script( 'raythompsonwebdev_plugin_slider_script', plugins_url('/js/slider-panel-ES6.js', __FILE__ ) );
 			
 
-			$raythompsonwebdev_com_slider_panel_text = '[
+			$raythompsonwebdev_plugin_slider_panel_text = '[
 				{
 					"id": "0",
 					"hash":"panel-1" ,
@@ -166,7 +166,7 @@ function sliderpanel_callback( $atts ) {
 				}
 			]';
 			
-			$raythompsonwebdev_com_slider_buttons = '[
+			$raythompsonwebdev_plugin_slider_buttons = '[
 				{
 					"id": "1",
 					"buttonname": "Adobe"
@@ -197,8 +197,8 @@ function sliderpanel_callback( $atts ) {
 				}
 			]';
 			
-			$raythompsonwebdev_com_slider_panels = json_decode( $raythompsonwebdev_com_slider_panel_text, true );
-			$raythompsonwebdev_com_courses_tabs  = json_decode( $raythompsonwebdev_com_slider_buttons, true );
+			$raythompsonwebdev_plugin_slider_panels = json_decode( $raythompsonwebdev_plugin_slider_panel_text, true );
+			$raythompsonwebdev_plugin_courses_tabs  = json_decode( $raythompsonwebdev_plugin_slider_buttons, true );
 
 
 	ob_start();
@@ -211,9 +211,9 @@ function sliderpanel_callback( $atts ) {
 			<!-- #hero-slider -->
 			<article class="hero-slider">
 				<!-- <ul id="list">
-					<?php foreach ( $raythompsonwebdev_com_courses_tabs as $raythompsonwebdev_com_courses_tab ) : ?>
+					<?php foreach ( $raythompsonwebdev_plugin_courses_tabs as $raythompsonwebdev_plugin_courses_tab ) : ?>
 					<li>
-						<a href="#" rel="#panel-<?php printf( '%s', esc_html( $raythompsonwebdev_com_courses_tab['id'] ), 'raythompsonwebdev-com' ); ?>" class="hero-btn active" title="<?php printf( '%s', esc_html( $raythompsonwebdev_com_courses_tab['buttonname'] ), 'raythompsonwebdev-com' ); ?>" ><?php printf( '%s', esc_html( $raythompsonwebdev_com_courses_tab['buttonname'] ), 'raythompsonwebdev-com' ); ?></a>
+						<a href="#" rel="#panel-<?php printf( '%s', esc_html( $raythompsonwebdev_plugin_courses_tab['id'] ), 'raythompsonwebdev-com' ); ?>" class="hero-btn active" title="<?php printf( '%s', esc_html( $raythompsonwebdev_plugin_courses_tab['buttonname'] ), 'raythompsonwebdev-com' ); ?>" ><?php printf( '%s', esc_html( $raythompsonwebdev_plugin_courses_tab['buttonname'] ), 'raythompsonwebdev-com' ); ?></a>
 					</li>
 					<?php endforeach; ?>
 
@@ -223,31 +223,31 @@ function sliderpanel_callback( $atts ) {
 					<!--slider body -->
 					<div class="slider-body">
 
-						<?php foreach ( $raythompsonwebdev_com_slider_panels as $raythompsonwebdev_com_slider_panel ) : ?>
+						<?php foreach ( $raythompsonwebdev_plugin_slider_panels as $raythompsonwebdev_plugin_slider_panel ) : ?>
 
-						<article class="panel" id="<?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['hash'] ), 'raythompsonwebdev-com' ); ?>">
+						<article class="panel" id="<?php printf( '%s', esc_html( $raythompsonwebdev_plugin_slider_panel['hash'] ), 'raythompsonwebdev-com' ); ?>">
 
-							<h2><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['title'] ), 'raythompsonwebdev-com' ); ?> </h2>
+							<h2><?php printf( '%s', esc_html( $raythompsonwebdev_plugin_slider_panel['title'] ), 'raythompsonwebdev-com' ); ?> </h2>
 
 							<figure class="slider-panel">
 
 								<a
-									href="<?php echo esc_url( home_url( '/' ) ); ?><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['bgimage'] ), 'raythompsonwebdev-com' ); ?>"
+									href="<?php echo esc_url( home_url( '/' ) ); ?><?php printf( '%s', esc_html( $raythompsonwebdev_plugin_slider_panel['bgimage'] ), 'raythompsonwebdev-com' ); ?>"
 									class="fancybox"
-									title="<?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['title'] ), 'raythompsonwebdev-com' ); ?>">
-									<span style="background-image: url('<?php echo esc_url( home_url( '/' ) ); ?><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['bgimage'] ), 'raythompsonwebdev-com' ); ?>') " > </span>
+									title="<?php printf( '%s', esc_html( $raythompsonwebdev_plugin_slider_panel['title'] ), 'raythompsonwebdev-com' ); ?>">
+									<span style="background-image: url('<?php echo esc_url( home_url( '/' ) ); ?><?php printf( '%s', esc_html( $raythompsonwebdev_plugin_slider_panel['bgimage'] ), 'raythompsonwebdev-com' ); ?>') " > </span>
 								</a>
 
 								<figcaption>
-									<h3><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['header'] ), 'raythompsonwebdev-com' ); ?></h3>
-									<h4><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['subheader'] ), 'raythompsonwebdev-com' ); ?></h4>
+									<h3><?php printf( '%s', esc_html( $raythompsonwebdev_plugin_slider_panel['header'] ), 'raythompsonwebdev-com' ); ?></h3>
+									<h4><?php printf( '%s', esc_html( $raythompsonwebdev_plugin_slider_panel['subheader'] ), 'raythompsonwebdev-com' ); ?></h4>
 
 									<ul>
-										<li class="dashicons-before"><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['task1'] ), 'raythompsonwebdev-com' ); ?></li>
-										<li class="dashicons-before"><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['task2'] ), 'raythompsonwebdev-com' ); ?></li>
-										<li class="dashicons-before"><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['task3'] ), 'raythompsonwebdev-com' ); ?></li>
-										<li class="dashicons-before"><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['task4'] ), 'raythompsonwebdev-com' ); ?></li>
-										<li class="dashicons-before"><?php printf( '%s', esc_html( $raythompsonwebdev_com_slider_panel['task5'] ), 'raythompsonwebdev-com' ); ?></li>
+										<li class="dashicons-before"><?php printf( '%s', esc_html( $raythompsonwebdev_plugin_slider_panel['task1'] ), 'raythompsonwebdev-com' ); ?></li>
+										<li class="dashicons-before"><?php printf( '%s', esc_html( $raythompsonwebdev_plugin_slider_panel['task2'] ), 'raythompsonwebdev-com' ); ?></li>
+										<li class="dashicons-before"><?php printf( '%s', esc_html( $raythompsonwebdev_plugin_slider_panel['task3'] ), 'raythompsonwebdev-com' ); ?></li>
+										<li class="dashicons-before"><?php printf( '%s', esc_html( $raythompsonwebdev_plugin_slider_panel['task4'] ), 'raythompsonwebdev-com' ); ?></li>
+										<li class="dashicons-before"><?php printf( '%s', esc_html( $raythompsonwebdev_plugin_slider_panel['task5'] ), 'raythompsonwebdev-com' ); ?></li>
 									</ul>
 
 									<div class="clearfix"></div>

@@ -11,7 +11,7 @@
 /**
  * Project
  */
-function raythompsonwebdev_com_register_taxonomies() {
+function raythompsonwebdev_plugin_register_taxonomies() {
 
 	$labels = array(
 		'name'                       => _x( 'Project Categories', 'raythompsonwebdev-com' ),

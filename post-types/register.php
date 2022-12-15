@@ -17,7 +17,7 @@
  *
  *  Creating a function to create our CPT.
  */
-function raythompsonwebdev_com_register_post_type() {
+function raythompsonwebdev_plugin_register_post_type() {
 
 	// Set UI labels for Custom Post Type.
 	$labels = array(
@@ -54,7 +54,7 @@ function raythompsonwebdev_com_register_post_type() {
 		'taxonomies'          => array( 'project-category', 'post_tag' ),
 
 		// A hierarchical CPT is like Pages and can have Parent and child items. A non-hierarchical CPT is like Posts.
-		// 'register_meta_box_cb' => 'raythompsonwebdev_com_register_metaboxes'.
+		// 'register_meta_box_cb' => 'raythompsonwebdev_plugin_register_metaboxes'.
 		'hierarchical'        => true,
 		'public'              => true,
 		'show_ui'             => true,

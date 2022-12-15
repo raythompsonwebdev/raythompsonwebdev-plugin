@@ -10,7 +10,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package    WordPress
- * @subpackage Raythompsonwebdev-com
+ * @subpackage Raythompsonwebdev-plugin
  */
 
  // If this file is called directly, abort.
@@ -27,20 +27,20 @@ remove_action( 'wp_head', 'wp_generator' );
 
 require_once (RTWDPATH . '/post-types/register.php');
 // Custom Post.
-add_action( 'init', 'raythompsonwebdev_com_register_post_type', 0 );
+add_action( 'init', 'raythompsonwebdev_plugin_register_post_type', 0 );
 
 require_once (RTWDPATH . '/taxonomies/register.php');
 // Taxonomy.
-add_action( 'init', 'raythompsonwebdev_com_register_taxonomies', 0 );
+add_action( 'init', 'raythompsonwebdev_plugin_register_taxonomies', 0 );
 
 /**
  *  Flush rewrite rules to add "project" as a permalink slug.
  */
-function raythompsonwebdev_com_rewrite_flush() {
-	raythompsonwebdev_com_register_post_type();
+function raythompsonwebdev_plugin_rewrite_flush() {
+	raythompsonwebdev_plugin_register_post_type();
 	flush_rewrite_rules();
 }
-register_activation_hook( __FILE__, 'raythompsonwebdev_com_rewrite_flush' );
+register_activation_hook( __FILE__, 'raythompsonwebdev_plugin_rewrite_flush' );
 
 /**
  * Registers an editor stylesheet for the theme.

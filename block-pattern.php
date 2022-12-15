@@ -1,44 +1,61 @@
 <?php
 
-function raythompsonwebdev_com_editor_style() {
-
-	add_editor_style( 'css/custom-editor-style.css' );
+// If this file is called directly, abort.
+if (!defined('WPINC')) {
+	die;
 }
-add_action( 'admin_init', 'raythompsonwebdev_com_editor_style' );
 
-function raythompsonwebdev_com_enqueue_pattern_style() {
-	wp_enqueue_style( 'raythompsonwebdev_com_pattern_style', plugins_url('css/blockpatterns.css',__FILE__ ) );
-	
+/**
+ * Currently plugin version.
+ */
+define('LIL_BP_VERSION', '1.0.0');
+
+/**
+ * Plugin URL
+ */
+define('LIL_BP_URL', plugin_dir_url(__FILE__)); //This include the trailing slash! 
+
+function raythompsonwebdev_plugin_editor_style()
+{
+
+	add_editor_style('css/custom-editor-style.css');
 }
-add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_enqueue_pattern_style' );
+add_action('admin_init', 'raythompsonwebdev_plugin_editor_style');
+
+function raythompsonwebdev_plugin_enqueue_pattern_style()
+{
+	wp_enqueue_style('raythompsonwebdev_plugin_pattern_style', plugins_url('css/blockpatterns.css', __FILE__));
+}
+add_action('wp_enqueue_scripts', 'raythompsonwebdev_plugin_enqueue_pattern_style');
 
 
 
 
 
-function raythompsonwebdev_com_register_block_patterns() {
+function raythompsonwebdev_plugin_register_block_patterns()
+{
 
-	if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
+	if (class_exists('WP_Block_Patterns_Registry')) {
 
 		register_block_pattern_category(
 			'home-page-block-pattern',
 			array(
-				'label' => __( 'Home Page Pattern', 'raythompsonwebdev-com' ),
+				'label' => __('Home Page Pattern', 'raythompsonwebdev-com'),
 			)
 		);
-		
+
 		register_block_pattern_category(
 			'about-page-block-pattern',
 			array(
-				'label' => __( 'About Page Pattern', 'raythompsonwebdev-com' ),
+				'label' => __('About Page Pattern', 'raythompsonwebdev-com'),
 			)
 		);
 
 		register_block_pattern(
 			'raythompsonwebdev-com/home-page-pattern',
 			array(
-				'title'       => __( 'Home Page Pattern', 'raythompsonwebdev-com' ),
-				'description' => _x( 'Columns for making lists with image and header. ', 'Block pattern description', 'raythompsonwebdev-com' ),
+				'title'       => __('Home Page Pattern', 'raythompsonwebdev-com'),
+				'description' => _x('Columns for making lists with image and header. ', 'Block pattern description', 'raythompsonwebdev-com'),
 				'content'     => '<!-- wp:group {"align":"wide"} -->
 				<div class="wp-block-group alignwide">
 					<div class="wp-block-group__inner-container">
@@ -135,14 +152,14 @@ function raythompsonwebdev_com_register_block_patterns() {
 				</div>
 				<!-- /wp:group -->
 				',
-				'categories'  => array( 'profile-page-block-pattern' ),
+				'categories'  => array('profile-page-block-pattern'),
 			)
 		);
 		register_block_pattern(
 			'raythompsonwebdev-com/about-page-pattern',
 			array(
-				'title'       => __( 'About Page Pattern', 'raythompsonwebdev-com' ),
-				'description' => _x( 'Layout for raythompsonwebdev portfolio about page.', 'Block pattern description', 'raythompsonwebdev-com' ),
+				'title'       => __('About Page Pattern', 'raythompsonwebdev-com'),
+				'description' => _x('Layout for raythompsonwebdev portfolio about page.', 'Block pattern description', 'raythompsonwebdev-com'),
 				'content'     => '<!-- wp:group {"align":"wide"} -->
 				<div class="wp-block-group alignwide" id="profile-container">
 					<div class="wp-block-group__inner-container">
@@ -166,11 +183,9 @@ function raythompsonwebdev_com_register_block_patterns() {
 					</div>
 				</div>
 				<!-- /wp:group -->',
-				'categories'  => array( 'about-page-block-pattern' ),
+				'categories'  => array('about-page-block-pattern'),
 			)
 		);
-
 	}
-
 }
-add_action( 'init', 'raythompsonwebdev_com_register_block_patterns' );
+add_action('init', 'raythompsonwebdev_plugin_register_block_patterns');

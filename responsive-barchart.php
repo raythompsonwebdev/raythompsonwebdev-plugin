@@ -18,16 +18,16 @@
  *
  */
 
-function raythompsonwebdev_com_enqueue_chart_style() {
-	wp_enqueue_style( 'raythompsonwebdev_com_chart_style', plugins_url('/css/responsive-barchart.css',__FILE__ ) );
-	wp_enqueue_script( 'raythompsonwebdev_com_chart_script', plugins_url('/js/responsive-barchart.js',__FILE__ ) );
+function raythompsonwebdev_plugin_enqueue_chart_style() {
+	wp_enqueue_style( 'raythompsonwebdev_plugin_chart_style', plugins_url('/css/responsive-barchart.css',__FILE__ ) );
+	wp_enqueue_script( 'raythompsonwebdev_plugin_chart_script', plugins_url('/js/responsive-barchart.js',__FILE__ ) );
 }
-add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_enqueue_chart_style' );
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_plugin_enqueue_chart_style' );
 
 function responsivechart_callback( $atts ) {
 
 	
-	$raythompsonwebdev_com_chart_bars = '[
+	$raythompsonwebdev_plugin_chart_bars = '[
 		{
 			"id": "1",
 			"language":"HTML",
@@ -56,7 +56,7 @@ function responsivechart_callback( $atts ) {
 		}
 	]';
 	
-	$raythompsonwebdev_com_bars = json_decode( $raythompsonwebdev_com_chart_bars, true );
+	$raythompsonwebdev_plugin_bars = json_decode( $raythompsonwebdev_plugin_chart_bars, true );
 
 	ob_start();
 	?>
@@ -71,14 +71,14 @@ function responsivechart_callback( $atts ) {
 
 			<?php
 
-			foreach ( $raythompsonwebdev_com_bars as $raythompsonwebdev_com_bar ) :
+			foreach ( $raythompsonwebdev_plugin_bars as $raythompsonwebdev_plugin_bar ) :
 
 				?>
 
 				<li>
 					<div
-						data-percentage="<?php	printf( '%s', esc_html( $raythompsonwebdev_com_bar['datapercentage'] ), 'raythompsonwebdev-com' ); ?>"	class="bar"	data-skill="<?php printf( '%s', esc_html( $raythompsonwebdev_com_bar['dataskill'] ), 'raythompsonwebdev-com' ); ?>" ></div>
-					<span><?php printf( '%s', esc_html( $raythompsonwebdev_com_bar['language'] ), 'raythompsonwebdev-com' ); ?></span>
+						data-percentage="<?php	printf( '%s', esc_html( $raythompsonwebdev_plugin_bar['datapercentage'] ), 'raythompsonwebdev-com' ); ?>"	class="bar"	data-skill="<?php printf( '%s', esc_html( $raythompsonwebdev_plugin_bar['dataskill'] ), 'raythompsonwebdev-com' ); ?>" ></div>
+					<span><?php printf( '%s', esc_html( $raythompsonwebdev_plugin_bar['language'] ), 'raythompsonwebdev-com' ); ?></span>
 				</li>
 
 			<?php endforeach; ?>
